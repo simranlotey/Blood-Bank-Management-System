@@ -1,0 +1,40 @@
+{% extends 'polls/base.html' %}
+{% block title %}<title>Search List</title>{% endblock %}
+{% block contents %}
+<style>
+    td {
+        height: 40px;
+    }
+
+    th {
+        height: 40px;
+    }
+</style>
+<div class="container">
+    <div class="p-5">
+        <div class="shadow-lg mx-auto">
+            <table class="table table-hover ">
+                <thead class="bg-danger text-white">
+                    <tr>
+                        <th>Donor Name</th>
+                        <th>Blood Group</th>
+                        <th>State</th>
+                        <th>City</th>
+                    </tr>
+                </thead>
+                {% for donor in donor_filter %}
+                <tbody>
+                    <tr>
+                        <td><a href="{% url 'search_info' donor.email %}" class="text-danger">{{donor.name}}</a></td>
+                        <td>{{donor.blood_group | capfirst}}</td>
+                        <td>{{donor.state | capfirst}}</td>
+                        <td>{{donor.city | capfirst}}</td>
+                    </tr>
+                </tbody>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+<div style="padding-bottom:433px;"></div>
+{% endblock %}

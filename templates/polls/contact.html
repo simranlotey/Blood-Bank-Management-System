@@ -1,0 +1,43 @@
+{% extends 'polls/base.html' %}
+{% block title %}<title>Contact</title>{% endblock %}
+{% block contents %}
+<style>
+    .width-border {
+        width: 700px;
+        border-radius: 12px;
+        border: 1px solid #d9534f;
+    }
+</style>
+
+<div class="container">
+    <div class="p-5">
+        <div class="shadow-lg p-5 mb-3 bg-white round width-border mx-auto">
+            <form action='' method="post">
+                <h2 class="text-center text-danger text-uppercase">Contact Us</h2><br><br>
+
+                <div class="row justify-content-between">
+                    <div class="col-7">
+                        <div class="p-3">
+                            <i class="fas fa-user fa-2x"></i>
+                            <p style="font-size:20px">Simranpreet Singh</p><br><br>
+                            <i class="fas fa-phone fa-2x"></i>
+                            <p style="font-size:20px">+91 7347308035</p><br><br>
+                            <i class="fas fa-envelope md fa-2x"></i>
+                            <p style="font-size:20px">simranpreetsinghlotey@gmail.com</p><br><br>
+                            <i class="fas fa-map-marker-alt fa-2x"></i>
+                            <p style="font-size:20px">#235 Bachittar Nagar, Gill Road, Near Gne College,Ludhiana</p>
+                            <br><br>
+                        </div>
+                    </div>
+                    <div class="col-5">
+                        {% csrf_token %}
+                        {{forms.as_p}}
+                        <button type="submit" class="btn btn-danger">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

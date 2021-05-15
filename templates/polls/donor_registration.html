@@ -1,0 +1,36 @@
+{% extends 'polls/base.html' %}
+{% block title %}<title>Registration Form</title>{% endblock %}
+{% block contents %}
+{% load static %}
+<style>
+    .image {
+        width: 150px;
+        height: 150px;
+        margin-left: 220px;
+    }
+
+    .width-border {
+        width: 700px;
+        border-radius: 12px;
+        border: 1px solid #d9534f;
+    }
+</style>
+
+<div class="container">
+    <div class="p-5">
+        <div class="shadow-lg p-5 mb-3 bg-white width-border mx-auto">
+            <form action="{% url 'donor_list' %}" method="post" novalidate>
+                <img src="{% static 'images/registration.jpg' %}" class="image">
+                <h4 class="text-center pt-4 text-danger text-uppercase">Registration Form</h4>
+                {% csrf_token %}
+                {{forms.as_p}}
+                <button type="submit" class="btn btn-danger">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

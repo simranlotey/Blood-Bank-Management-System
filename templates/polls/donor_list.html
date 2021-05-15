@@ -1,0 +1,50 @@
+{% extends 'polls/base.html' %}
+{% block title %}<title>Donor List</title>{% endblock %}
+{% block contents %}
+
+<style>
+    .borderr {
+        border-radius: 12px;
+        border: 1px solid #d9534f;
+    }
+
+    p b {
+        color: #d9534f;
+        font-size: 20px;
+    }
+
+    p b:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<div class="container">
+    <div class="p-5">
+        <div class="shadow-lg p-5 mb-3 bg-white w-50 borderr mx-auto">
+
+            <h1 class="text-center text-danger">Welcome to Blood Bank</h1>
+            <h2 class="text-center text-info">Your Details</h2><br>
+            <p><b>Name: </b>{{forms.name.data | capfirst}}</p>
+            <p><b>Father Name: </b>{{forms.father_name.data | capfirst}}</p>
+            <p><b>Gender: </b>{{forms.gender.data | capfirst}}</p>
+            <p><b>E-Mail: </b>{{forms.email.data}}</p>
+            <p><b>Phone Number: </b>{{forms.phone_number.data}}</p>
+            <p><b>State: </b>{{forms.state.data | capfirst}}</p>
+            <p><b>City: </b>{{forms.city.data | capfirst}}</p>
+            <p><b>Date Of Birth: </b>{{forms.date_of_birth.data}}</p>
+            <p><b>Occupation: </b>{{forms.occupation.data}}</p>
+            <p><b>Blood Group: </b>{{forms.blood_group.data | capfirst}}</p>
+            <p><b>Home Address: </b>{{forms.home_address.data}}</p>
+            <p><b>Last Donate Date: </b>{{forms.last_donate_date.data}}</p>
+            <p><b>Any Disease: </b>{{forms.any_disease.data | capfirst}}</p>
+            <p><b>Allergies: </b>{{forms.allergies.data | capfirst}}</p>
+            <p><b>Cardiac: </b>{{forms.cardiac.data | capfirst}}</p>
+            <p><b>Bleeding Disorder: </b>{{forms.bleeding_disorder.data | capfirst}}</p>
+            <p><b>HbsAg Hcv HIV: </b>{{forms.hbsAg_hcv_hIV.data | capfirst}}</p><br>
+            <h3 class="text-center">{{forms.name.data}} Your Registration Is Successfull....</h3>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
