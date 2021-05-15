@@ -25,7 +25,7 @@ then
 
 Open browser, <http://localhost:8000>
 
-## stop the app
+### stop the app
 
            Ctrl+C
 
