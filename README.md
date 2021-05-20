@@ -3,11 +3,9 @@
 
 ### How to run a App
 
-Download python & pip
-
-
 ### create a virtual environment 
 
+Download python & pip
 
 ### download requirement file
 
