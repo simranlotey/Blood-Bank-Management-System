@@ -3,7 +3,7 @@
 
 ### How to run a App
 
-### create a virtual environment 
+### Create a virtual environment 
 
 Download python & pip
 
