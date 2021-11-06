@@ -121,7 +121,7 @@
   <div class="container-fluid border">
     <nav class="navbar bg-white">
       <a class="navbar-brand" href="#">
-        <img src="{% static 'images/logo.png' %}" width="80" height="80" alt="">
+        {% load static %} <img src="{% static 'images/logo.png' %}" width="80" height="80" alt="">
       </a>
 
       <ul class="nav justify-content-end">

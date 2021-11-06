@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import home, about, donor_registration, search, search_info, contact
-
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('', home, name='home'),
@@ -15,3 +15,5 @@ urlpatterns = [
          search_info, name='search_info'),
     path('contact/', contact, name='contact'),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
