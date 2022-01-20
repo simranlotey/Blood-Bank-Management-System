@@ -83,5 +83,3 @@ def contact(request):
     }
 
     return render(request, 'polls/contact.html', context)
-
-

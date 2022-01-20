@@ -45,6 +45,7 @@ class DonorRegistration(ModelForm):
         }
 
 
+
 class Search(forms.ModelForm):
     class Meta:
         model = models.sea_rch
