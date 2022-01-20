@@ -80,7 +80,7 @@ class donor_Registration(models.Model):
     )
 
     home_address = models.TextField(
-        max_length=50,
+        max_length=500,
         blank=True,
         null=True,
     )
@@ -207,7 +207,7 @@ class con_tact(models.Model):
     )
 
     subject = models.TextField(
-        max_length=50,
+        max_length=500,
         blank=True,
         null=True,
     )

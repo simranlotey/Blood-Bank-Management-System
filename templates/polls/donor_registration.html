@@ -1,24 +1,33 @@
-{% extends 'polls/base.html' %} {% block title %}<title>Registration Form</title
->{% endblock %} {% block contents %} {% load static %}
+{% extends 'polls/base.html' %} {% block title %}<title>
+  Registration Form
+</title>
+{% endblock %} {% block contents %} {% load static %}
 <style>
   .image {
     width: 150px;
     height: 150px;
-    margin-left: 220px;
   }
 
   .width-border {
-    width: 700px;
+    width: 100%;
     border-radius: 12px;
     border: 1px solid #d9534f;
   }
+  .containers {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
 </style>
 
-<div class="container">
+<div class="containers">
   <div class="p-5">
-    <div class="shadow-lg p-5 mb-3 bg-white width-border mx-auto">
+    <div class="shadow-lg p-5 mb-3 bg-white width-border">
       <form action="{% url 'donor_list' %}" method="post" novalidate>
-        <img src="{% static 'images/registration.jpg' %}" class="image" />
+        <div class="text-center">
+          <img src="{% static 'images/registration.jpg' %}" class="image" />
+        </div>
         <h4 class="text-center pt-4 text-danger text-uppercase">
           Registration Form
         </h4>
